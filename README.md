@@ -50,3 +50,10 @@ Run the scaffold check from the repository root:
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\verify_synapse_scaffold.ps1 -RepoRoot .
 ```
+
+Use the thin build entrypoints when the local toolchain is available:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\build-native.ps1
+powershell -ExecutionPolicy Bypass -File .\scripts\build-host.ps1
+```
