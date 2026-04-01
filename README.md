@@ -26,6 +26,15 @@ This repository carries the Git and GitHub operating baseline needed to move `SY
 - Native host lane: `JKhyro/SYNAPSE#10`
 - Package topology lane: `JKhyro/SYNAPSE#12`
 
+## Scaffold
+
+The first repository scaffold lives under:
+
+- `src/native/synapse_core/` for the Native C section-entry contract and stub launch exports
+- `src/host/Synapse.Host/` for the Avalonia shell host and thin interop glue
+- `registry/synapse.topology.json` for package and launch topology metadata
+- `docs/architecture/synapse-host-boundary.md` for the explicit runtime-boundary note
+
 ## Validation
 
 Run the local infrastructure check from the repository root:
@@ -35,3 +44,16 @@ powershell -ExecutionPolicy Bypass -File .\infra\operator\verify_git_github_infr
 ```
 
 Use `-SkipGh` when you only need repository-file verification and do not want to query live GitHub.
+
+Run the scaffold check from the repository root:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\verify_synapse_scaffold.ps1 -RepoRoot .
+```
+
+Use the thin build entrypoints when the local toolchain is available:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\build-native.ps1
+powershell -ExecutionPolicy Bypass -File .\scripts\build-host.ps1
+```
