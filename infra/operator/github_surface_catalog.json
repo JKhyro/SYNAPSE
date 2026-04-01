@@ -1,0 +1,38 @@
+{
+  "repository": {
+    "owner": "JKhyro",
+    "name": "SYNAPSE",
+    "slug": "JKhyro/SYNAPSE",
+    "default_branch": "main",
+    "branch_prefix": "codex/"
+  },
+  "project": {
+    "owner": "JKhyro",
+    "number": 18,
+    "title": "SYNAPSE"
+  },
+  "issues": {
+    "infrastructure": 13,
+    "scaffold": 8,
+    "host": 10,
+    "topology": 12
+  },
+  "required_files": [
+    ".gitignore",
+    ".gitattributes",
+    ".github/CODEOWNERS",
+    ".github/ISSUE_TEMPLATE/config.yml",
+    ".github/ISSUE_TEMPLATE/bug_report.yml",
+    ".github/ISSUE_TEMPLATE/feature_request.yml",
+    ".github/ISSUE_TEMPLATE/git_github_infrastructure.yml",
+    ".github/pull_request_template.md",
+    ".github/workflows/git-github-infrastructure.yml",
+    "CONTRIBUTING.md",
+    "README.md",
+    "infra/operator/GIT_GITHUB_INFRASTRUCTURE.md",
+    "infra/operator/GITHUB_THREAD_BOOTSTRAP.md",
+    "infra/operator/github_context_probe.ps1",
+    "infra/operator/github_surface_catalog.json",
+    "infra/operator/verify_git_github_infrastructure.ps1"
+  ]
+}

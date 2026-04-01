@@ -1,0 +1,33 @@
+name: Git and GitHub infrastructure
+description: Request or track repo-level Git and GitHub operating changes.
+title: "[Infra] "
+labels: []
+body:
+  - type: textarea
+    id: surface
+    attributes:
+      label: Target surface
+      description: Repository files, workflow, project board, issue flow, or PR flow.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is missing, inconsistent, or blocked.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected improvement
+      description: What a correct repo or GitHub surface would look like.
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation
+      description: How this should be verified locally or on GitHub.
+    validations:
+      required: true
