@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "1.0.0",
+  "suite": "SYNAPSE",
+  "boundary": {
+    "coreRuntimeOwner": "native-c",
+    "shellHost": "avalonia",
+    "interop": "native-c-interop",
+    "managedScope": [
+      "host-bootstrap",
+      "ui-composition",
+      "interop-glue"
+    ]
+  },
+  "host": {
+    "project": "src/host/Synapse.Host/Synapse.Host.csproj",
+    "entryPoint": "Synapse.Host.Program",
+    "launchMode": "desktop-shell"
+  },
+  "nativeCore": {
+    "buildProject": "src/native/synapse_core/CMakeLists.txt",
+    "libraryName": "synapse_core",
+    "contractHeader": "src/native/synapse_core/include/synapse_shell_contract.h"
+  },
+  "sections": [
+    {
+      "key": "CORTEX",
+      "title": "CORTEX",
+      "surface": "Agent and array management",
+      "launchOwner": "native-c",
+      "routeKind": "native-entrypoint",
+      "presentationMode": "embedded-pane",
+      "entrySymbol": "synapse_launch_cortex"
+    },
+    {
+      "key": "VECTOR",
+      "title": "VECTOR",
+      "surface": "Active workspace product",
+      "launchOwner": "native-c",
+      "routeKind": "native-entrypoint",
+      "presentationMode": "embedded-pane",
+      "entrySymbol": "synapse_launch_vector"
+    },
+    {
+      "key": "FORGE",
+      "title": "FORGE",
+      "surface": "Code and file workspace",
+      "launchOwner": "native-c",
+      "routeKind": "native-entrypoint",
+      "presentationMode": "embedded-pane",
+      "entrySymbol": "synapse_launch_forge"
+    },
+    {
+      "key": "ANVIL",
+      "title": "ANVIL",
+      "surface": "Launcher and overview shell",
+      "launchOwner": "native-c",
+      "routeKind": "native-entrypoint",
+      "presentationMode": "embedded-pane",
+      "entrySymbol": "synapse_launch_anvil"
+    },
+    {
+      "key": "NEXUS",
+      "title": "NEXUS",
+      "surface": "Communications surface",
+      "launchOwner": "native-c",
+      "routeKind": "native-entrypoint",
+      "presentationMode": "embedded-pane",
+      "entrySymbol": "synapse_launch_nexus"
+    }
+  ]
+}
