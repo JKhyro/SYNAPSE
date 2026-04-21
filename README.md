@@ -25,3 +25,10 @@ It spans `CORTEX`, `VECTOR`, `FORGE`, `ANVIL`, and `NEXUS`, but it is not the ca
 - `SYNAPSE` owns composition, launching, registry, embedding, and program-of-programs shell behavior.
 
 See [docs/program-composition-doctrine.md](docs/program-composition-doctrine.md) for the current doctrine note.
+
+## Runtime base: Hermes-derived FURYOKU
+
+The live agent runtime under the suite shell has moved from OpenClaw to Hermes Agent. Hermes-derived FURYOKU is the runtime spine that hosts the 7-Symbiote swarm composed through SYNAPSE; OpenClaw is demoted to a feature-harvest lane, not a host runtime. SYNAPSE's suite-shell contract is unchanged by the move — composition, launching, and registry boundaries still apply — but the underlying runtime that hosts the composed characters is now Hermes-derived. Anchor is universalized across `JKhyro` Project #20 (FURYOKU) and Project #10 (SYMBIOSIS).
+
+- Authoritative migration plan: [`FURYOKU/docs/hermes-furyoku-migration.md`](https://github.com/JKhyro/FURYOKU/blob/main/docs/hermes-furyoku-migration.md)
+- OpenClaw carryover rules: [`FURYOKU/docs/openclaw-carryover-inventory.md`](https://github.com/JKhyro/FURYOKU/blob/main/docs/openclaw-carryover-inventory.md)
